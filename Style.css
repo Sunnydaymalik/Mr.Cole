@@ -383,11 +383,6 @@ nav .fa-xmark {
         font-size: 40px;
     }
     
-    nav {
-        position: relative;
-        padding: 10px 0;
-    }
-    
     nav .fa-bars {
         display: block;
         font-size: 25px;
@@ -395,39 +390,27 @@ nav .fa-xmark {
         color: #FFD700;
     }
     
+    nav {
+        justify-content: space-between;
+    }
+    
     nav ul {
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #000;
-        padding: 10px 0;
-        margin: 0;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
         z-index: 1000;
-        border-bottom: 2px solid #FFD700;
+        transition: right 0.5s;
+        background: #000;
+        border-left: 1px solid #FFD700;
     }
     
     nav ul.show {
         display: block;
-    }
-    
-    nav ul li {
-        display: block;
-        margin: 0;
-        padding: 10px 20px;
-    }
-    
-    nav ul li a {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        padding: 5px 0;
-    }
-    
-    nav ul li a:hover {
-        color: #FFD700;
+        right: 0;
     }
     
     .about-col-1, .about-col-2 {
