@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title> Mr. Cole's Digital Portfolio </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
     <script src="https://kit.fontawesome.com/479f814e81.js" crossorigin="anonymous"></script>
 </head>
@@ -42,9 +45,15 @@
             </nav>
 
             <div class="header-text">
-                <p class="typewriter">UI/UX Designer</p>
-                <h1 class="typewriter">Hi, I'm <span>Prince Cole</span></h1>
-                <h1 class="typewriter">from the United States</h1>
+                <div class="typewriter-container">
+                    <p class="typewriter" data-delay="0">Security Analyst</p>
+                </div>
+                <div class="typewriter-container">
+                    <h1 class="typewriter" data-delay="3500">Hi, I'm <span>Prince Cole</span></h1>
+                </div>
+                <div class="typewriter-container">
+                    <h1 class="typewriter" data-delay="7000">from the United States</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -189,6 +198,11 @@
         </div>
     </div>
     <script>
+        // Ensure page starts at top on load
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+
         // Theme Toggle
         const themeToggle = document.getElementById('theme-toggle');
         themeToggle.addEventListener('change', () => {
@@ -198,18 +212,18 @@
         // Typing Animation
         document.addEventListener('DOMContentLoaded', function() {
             const typewriters = document.querySelectorAll('.typewriter');
-            let delay = 0;
             
-            typewriters.forEach((element, index) => {
+            typewriters.forEach((element) => {
+                const delay = parseInt(element.getAttribute('data-delay'));
+                
                 setTimeout(() => {
                     element.style.animation = `typing 3.5s steps(40, end) forwards`;
                     
-                    // Add completed class after animation
+                    // Remove cursor immediately after typing completes
                     setTimeout(() => {
                         element.classList.add('completed');
-                    }, 3500);
+                    }, 3490); // Slightly before the animation ends to ensure immediate removal
                 }, delay);
-                delay += 3500; // Delay each animation by 3.5 seconds
             });
         });
 
@@ -257,6 +271,16 @@
         function toggleMenu() {
             sidemenu.classList.toggle("show");
         }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('sidemenu');
+            const menuButton = document.querySelector('.fa-bars');
+            
+            if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
     </script>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycby612eh2vP-uoNvDfqsYpHySirUbrtfX-FpUEBiMTehgb5lXy-FO8wQlKdLDrZ1cy3jgQ/exec'
@@ -272,10 +296,9 @@
                     msg.innerHTML = ""
                 },5000)
                 form.reset()
-                        })
+            })
             .catch(error => console.error('Error!', error.message))
         })
     </script>
 </body>
 </html>
-       
