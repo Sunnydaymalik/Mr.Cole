@@ -373,6 +373,8 @@ nav .fa-xmark {
         margin-top: 30%;
         text-align: left;
         padding: 0 20px;
+        position: relative;
+        z-index: 1;
     }
     
     .header-text h1 {
@@ -388,6 +390,7 @@ nav .fa-xmark {
         font-size: 25px;
         cursor: pointer;
         color: #FFD700;
+        z-index: 2;
     }
     
     nav {
@@ -411,6 +414,20 @@ nav .fa-xmark {
     nav ul.show {
         display: block;
         right: 0;
+    }
+
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #FFD700;
+        font-size: 25px;
+        cursor: pointer;
+        display: none;
+    }
+
+    nav ul.show .menu-close {
+        display: block;
     }
     
     .about-col-1, .about-col-2 {
@@ -637,21 +654,4 @@ nav .fa-xmark {
     gap: 20px;
     position: relative;
     z-index: 2;
-}
-
-.header-text p {
-    font-size: 24px;
-    font-weight: 500;
-    color: #FFD700;
-}
-
-.header-text h1 {
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-.header-text h1 span {
-    color: #FFD700;
-    font-weight: 700;
 }
