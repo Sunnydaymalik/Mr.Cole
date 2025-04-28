@@ -16,7 +16,7 @@ body{
     width: 100%;
     height: 100vh;
     background-image: url(dramatic.JPG);
-    background-size: 90% auto;
+    background-size: 120% auto;
     background-position: 60% 30%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -520,22 +520,26 @@ nav .fa-xmark {
 /* Typing Animation */
 .typewriter {
     overflow: hidden;
-    border-right: 2px solid #FFD700;
     white-space: nowrap;
     margin: 0 auto;
-    animation: 
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
+    opacity: 0;
+    animation: typing 3.5s steps(40, end) forwards;
+}
+
+.typewriter.completed {
+    opacity: 1;
+    border-right: none;
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #FFD700 }
+    from { 
+        width: 0;
+        opacity: 0;
+    }
+    to { 
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 /* Certifications Section */
