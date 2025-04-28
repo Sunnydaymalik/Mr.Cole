@@ -34,7 +34,7 @@
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -42,8 +42,9 @@
             </nav>
 
             <div class="header-text">
-                <p>UI/UX Designer</p>
-                <h1>Hi, I'm <span>Prince Cole</span><br>from the United States</h1>
+                <p class="typewriter">UI/UX Designer</p>
+                <h1 class="typewriter">Hi, I'm <span>Prince Cole</span></h1>
+                <h1 class="typewriter">from the United States</h1>
             </div>
         </div>
     </div>
@@ -67,6 +68,12 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <div class="skill-bars">
+                            <div class="skill-bar">
+                                <h3>Cybersecurity</h3>
+                                <div class="bar">
+                                    <div class="progress" style="width: 95%"></div>
+                                </div>
+                            </div>
                             <div class="skill-bar">
                                 <h3>UI/UX Design</h3>
                                 <div class="bar">
@@ -103,29 +110,18 @@
             </div>
         </div>
     </div>
-    <!--Services-->
-    <div id="services">
+    <!--Certifications-->
+    <div id="certifications">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>I can design complex as well as simple websites for personal or professional usage</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>UI/UX Design</h2>
-                <p>I can design complex as well as simple websites for personal or professional usage</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>I can design complex as well as simple websites for personal or professional usage</p>
-                <a href="#">Learn more</a>
-            </div>
+            <h1 class="sub-title">My Certifications</h1>
+            <div class="certifications-list">
+                <div class="certification">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>CompTIA Security+</h2>
+                    <p>Professional certification that validates the baseline skills necessary to perform core security functions and pursue an IT security career.</p>
+                    <p class="date">Expected: 2024</p>
+                </div>
+                <!-- Add more certifications here as needed -->
             </div>
         </div>
     </div>
@@ -199,6 +195,19 @@
             document.body.classList.toggle('light-mode');
         });
 
+        // Typing Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const typewriters = document.querySelectorAll('.typewriter');
+            let delay = 0;
+            
+            typewriters.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.animation = `typing 3.5s steps(40, end), blink-caret .75s step-end infinite`;
+                }, delay);
+                delay += 3500; // Delay each animation by 3.5 seconds
+            });
+        });
+
         // Scroll Progress
         window.onscroll = function() {
             // Progress Bar
@@ -223,21 +232,6 @@
                 behavior: 'smooth'
             });
         });
-
-        // Animate Skill Bars on Scroll
-        const skillBars = document.querySelectorAll('.progress');
-        const animateOnScroll = () => {
-            skillBars.forEach(bar => {
-                const barPosition = bar.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight;
-                if (barPosition < screenPosition) {
-                    bar.style.width = bar.getAttribute('style').split(':')[1];
-                }
-            });
-        };
-
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
 
         // Existing Tab Functionality
         var tablinks = document.getElementsByClassName("tab-links");
