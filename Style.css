@@ -16,7 +16,7 @@ body{
     height: 100vh;
     background-image: url(dramatic.JPG);
     background-size: cover;
-    background-position: center;
+    background-position: 60% 30%;
     position: relative;
 }
 #header::before {
