@@ -277,7 +277,7 @@
             const menu = document.getElementById('sidemenu');
             const menuButton = document.querySelector('.fa-bars');
             
-            if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+            if (!menu.contains(event.target) && !menuButton.contains(event.target) && menu.classList.contains('show')) {
                 menu.classList.remove('show');
             }
         });
