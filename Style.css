@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 html{
@@ -364,7 +364,7 @@ nav .fa-xmark {
 }
 @media only screen and (max-width: 600px) {
     #header {
-        background-size: 90% auto;
+        background-size: 120% auto;
         background-position: 60% 30%;
         background-attachment: scroll;
     }
@@ -383,34 +383,51 @@ nav .fa-xmark {
         font-size: 40px;
     }
     
-    nav .fa-bars,
-    nav .fa-xmark {
+    nav {
+        position: relative;
+        padding: 10px 0;
+    }
+    
+    nav .fa-bars {
         display: block;
         font-size: 25px;
         cursor: pointer;
-    }
-    
-    nav {
-        justify-content: space-between;
+        color: #FFD700;
     }
     
     nav ul {
         display: none;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
         background: #000;
-        border-left: 1px solid #FFD700;
+        padding: 10px 0;
+        margin: 0;
+        z-index: 1000;
+        border-bottom: 2px solid #FFD700;
     }
     
     nav ul.show {
         display: block;
-        right: 0;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 0;
+        padding: 10px 20px;
+    }
+    
+    nav ul li a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 5px 0;
+    }
+    
+    nav ul li a:hover {
+        color: #FFD700;
     }
     
     .about-col-1, .about-col-2 {
@@ -534,31 +551,39 @@ nav .fa-xmark {
 }
 
 /* Typing Animation */
+.typewriter-container {
+    position: relative;
+    display: inline-block;
+}
+
 .typewriter {
-    overflow: hidden;
+    display: inline-block;
     white-space: nowrap;
-    margin: 0 auto;
-    opacity: 0;
-    height: 0;
+    overflow: hidden;
+    width: 0;
     animation: typing 3.5s steps(40, end) forwards;
 }
 
-.typewriter.completed {
-    opacity: 1;
-    height: auto;
+.typewriter::after {
+    content: '|';
+    position: absolute;
+    right: 0;
+    color: transparent;
+    animation: blink 1s step-end infinite;
+}
+
+.typewriter.completed::after {
+    display: none;
 }
 
 @keyframes typing {
-    from { 
-        width: 0;
-        opacity: 0;
-        height: 0;
-    }
-    to { 
-        width: 100%;
-        opacity: 1;
-        height: auto;
-    }
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { opacity: 1 }
+    50% { opacity: 0 }
 }
 
 /* Certifications Section */
@@ -620,4 +645,30 @@ nav .fa-xmark {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Header Text Styles */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-text p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFD700;
+}
+
+.header-text h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.header-text h1 span {
+    color: #FFD700;
+    font-weight: 700;
 }
