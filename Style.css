@@ -56,6 +56,9 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+nav ul .menu-close {
+    display: none;
+}
 nav ul li {
     margin: 0 20px;
 }
@@ -416,7 +419,7 @@ nav .fa-xmark {
         right: 0;
     }
 
-    .menu-close {
+    nav ul .menu-close {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -654,4 +657,25 @@ nav .fa-xmark {
     gap: 20px;
     position: relative;
     z-index: 2;
+}
+
+.header-text p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFD700;
+}
+
+.header-text h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.header-text h1 span {
+    color: #FFD700;
+    font-weight: 700;
+}
+
+.menu-close {
+    display: none;
 }
