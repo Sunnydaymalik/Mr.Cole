@@ -1,0 +1,34 @@
+Holistic Reflection on Professional Growth
+Portfolio: https://github.com/Sunnydaymalik/Mr.Cole 
+Prince Cole | University of St. Thomas Capstone Reflection
+
+My journey in computer science has been a challenging one filled with many obstacles and lessons. At the beginning, I was an overwhelmed kid with many doubts. I knew the subject was rigorous, and many people around me spoke of how hard it was. I listened to them initially and chose to study Computer Engineering. I found I had no love or passion for it, and eventually I listened to myself and decided to switch to Computer Science. It’s been my smartest decision to date.
+Since making that change, I’ve grown not only in technical ability but in confidence, clarity, and purpose. That growth is reflected in the many projects I’ve taken on and successfully completed during my time at St. Thomas. Looking back at my portfolio, I realize that while many projects sharpened my technical skills, few challenged me to combine those skills with empathy and real-world problem solving. The most significant exception—and my proudest project to date—is my capstone project: a mobile AI wellbeing assistant for college students called WeBe.
+The goal of WeBe was to help students navigate their mental health and wellbeing by recommending campus resources and events tailored to their needs and interests. It was built using React Native and integrated with OpenAI’s GPT API, specifically the turbo 3.5 model. The role of the assistant is to provide conversational support that feels personalized and accessible. More than a technical achievement, WeBe represents my effort to align myself with the University Of St. Thomass’ mission by creating technology that serves others in a meaningful, human-centered way.
+Another key project was a gesture-controlled creative coding app using Handsfree.js and p5.js. This task pushed me to troubleshoot hardware integration, manage asynchronous data flows, and design intuitive user interfaces. These projects reflect my growth in both technical proficiency and user-centered thinking.
+
+How has your perspective on technology’s role in society evolved?
+Initially, I viewed technology primarily as a means for efficiency. However, my perspective has evolved to see technology as a tool for empowerment and inclusivity. The capstone project, which supports student mental health and wellbeing, highlighted the importance of ethical design and responsible AI use. I’ve learned that creating technology with empathy is not optional, it’s essential.
+
+What challenges helped you grow the most and why?
+One of my biggest growth moments was addressing the challenge of personalizing AI responses without fine-tuning models. I was able to develop a retrieval-augmented system that dynamically injects relevant data into prompts. Doing this I learned to innovate within constraints. Additionally, collaborating on group projects helped me overcome initial struggles with Git version control, teaching me the importance of clear communication and workflow organization.
+
+How do your technical achievements align with your personal values?
+My projects reflect values of health, wellness, and community engagement. The AI assistant’s emphasis on providing accurate, actionable guidance supports student wellbeing, aligning with my belief in using technology to make a positive impact. I believe technology is a tool that should be used to enhance the lives of humans.
+
+How have your technical and soft skills complemented each other in projects?
+My technical and interpersonal skills have cooperated well throughout my projects. In team projects, I often served as a bridge between technical and non-technical members, simplifying complex ideas for better collaboration. This ability has been crucial in ensuring project success and fostering a supportive team environment.
+
+What experiences best demonstrate your growth in both areas?
+A pivotal experience was leading a project where team members had diverse skill sets and communication styles. By facilitating open discussions, delegating tasks effectively, and encouraging feedback, I honed both my technical leadership and interpersonal skills. These experiences underscore my ability to navigate technical challenges while fostering teamwork.
+
+How do you plan to continue developing both skill sets?
+Moving forward, I plan to deepen my backend development understanding and Cybersecurity Knowledge. Simultaneously, I aim to enhance my leadership and mentorship abilities by engaging in collaborative open-source projects and seeking opportunities to contribute to ethically focused tech communities.
+ 
+Interview Preparation Reflection
+1. Tell me about a time you faced a major technical obstacle.
+During my capstone project, integrating campus-specific data into the GPT API posed a significant challenge. Fine-tuning was not an option, so I developed a retrieval-augmented system that matched user queries to a local dataset, dynamically feeding this context into prompts. This solution required extensive research and iterative testing, ultimately enhancing the AI’s relevance and accuracy.
+2. Describe a situation where you had to collaborate with someone very different from you.
+	In a web development group project, I worked with a teammate focused on visual design with little coding experience. We initially struggled to align, but through active listening and breaking tasks into accessible steps, we successfully merged our perspectives. This taught me the value of patience and the importance of the uniqueness of others.
+3. What’s a non-technical skill you’ve developed that you’re most proud of?
+	One non-technical skill I'm proud of is my ability to ask clarifying questions. Early in my journey, I hesitated to seek help, but I’ve learned that thoughtful questioning fosters better understanding and collaboration. This skill has been crucial in team settings and has significantly improved my problem-solving approach.
